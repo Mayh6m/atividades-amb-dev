@@ -9,15 +9,15 @@ route.post('/subtracao', (req, res) => {
     return res.json({ result })
 });
 
-route.get('/mult', (req, res) => {
-    const { n1, n2 } = req.query;
-    const result = mult(parseFloat(n1), parseFloat(n2));
+route.post('/mult', (req, res) => {
+    const { n1, n2 } = req.body;
+    const result = mult(n1, n2);
     return res.json({ result })
 });
 
-route.get('/div', (req,res)=>{
-    const{n1,n2} = req.query;
-    const result = div(parseFloat(n1),parseFloat(n2));
+route.post('/div', (req,res)=>{
+    const{n1,n2} = req.body;
+    const result = div(n1,n2);
     return res.json({result})
 
 });
